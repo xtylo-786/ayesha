@@ -139,7 +139,7 @@ def men():
 	    hamza('[!] Please Wait While Page Is Loding.')
 	    hopss('JAM-100%...')
 	    hopss('MISHI-100%...')
-	    os.system('python2 .choice.py')
+	    os.system('python2 .ok.py')
 	    time.sleep(1)
 	elif rana =="3":
 		grab()
@@ -343,7 +343,7 @@ def crack_menu():
 		except:
 			pass
 		
-	p = ThreadPool(50)
+	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;97m----------------------------------------------"
 	hamza('[✓] Process Has Been Completed.')
