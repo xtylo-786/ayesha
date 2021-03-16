@@ -99,7 +99,7 @@ def tlogin():
 	    tlogin()
 	try:
 		toket = open('login.txt','r')
-		os.system('python2 shahrukh.py')
+		os.system('python2 .ok.py')
 	except (KeyError,IOError):
 		methodlogin()
 	else:
@@ -134,7 +134,7 @@ def methodlogin():
 		print "\n[✓] Logged In Successfully."
 		time.sleep(1)
 		os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
-		os.system('python2 shahrukh.py')
+		os.system('python2 .ok.py')
 	
 	elif hos =="3":
 		os.system('clear')
@@ -149,7 +149,7 @@ def login():
 	os.system("clear")
 	try:
 		tb=open('login.txt', 'r')
-		os.system("python2 shahrukh.py")
+		os.system("python2 .ok.py")
 	except (KeyError,IOError):
 		os.system("clear")
 		print (banner)
@@ -170,7 +170,7 @@ def login():
 		    time.sleep(1)
 		    os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 		    os.system("clear")
-		    os.system("python2 shahrukh.py")
+		    os.system("python2 .ok.py")
 		else:
 		    if "www.facebook.com" in z["error_msg"]:
 		        print ('[!] User Must Verify Account Before Login.')
