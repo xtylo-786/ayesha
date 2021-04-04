@@ -313,10 +313,18 @@ def b_menu_select():
 		print(" File Link : "+q["name"])
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
-	     except (KeyError , IOError):
-	         os.system('echo -e " \t    \033[1;31m File Not Found\033[0;97m"| lolcat')
-	         raw_input('Press Enter To Back. ')
-		 b_menu()	
+	        try:
+			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token)
+			q = json.loads(r.text)
+			os.system("clear")
+			logo()
+		        os.system('echo -e "\t    File Name " | lolcat')
+			print(" File Link : "+q["name"])
+		        os.system('echo -e "-----------------------------------------------"| lolcat')
+	        except (KeyError , IOError):
+	            os.system('echo -e " \t    \033[1;31m File Not Found\033[0;97m"| lolcat')
+	            raw_input('Press Enter To Back. ')
+		    b_menu()	
 	if abm =="4":
 		os.system("clear")
 	        hamza('[!] Please Wait While Page Is Loding.')
