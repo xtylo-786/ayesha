@@ -313,8 +313,8 @@ def b_menu_select():
 		print(" File Link : "+q["name"])
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
-	    except (KeyError , IOError):
-	         print"[!] File Not Found."
+	     except (KeyError , IOError):
+	         os.system('echo -e " \t    \033[1;31m File Not Found\033[0;97m"| lolcat')
 	         raw_input('Press Enter To Back. ')
 		 b_menu()	
 	if abm =="4":
