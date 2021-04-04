@@ -3,7 +3,7 @@
 #coding=utf-8
 #real codding by Jam Shahrukh
 try:
-    import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,requests
+    import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,mechanize,requests
     from multiprocessing.pool import ThreadPool
     from requests.exceptions import ConnectionError
     from mechanize import Browser
