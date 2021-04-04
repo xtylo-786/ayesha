@@ -308,8 +308,8 @@ def b_menu_select():
 	if abm =="3":
 		os.system("clear")
 	        logo()
-	        try:
 	        os.system('echo -e "\t    File Name " | lolcat')
+		os.system('echo -e "-----------------------------------------------"| lolcat')
 		print(" File Link : "+q["name"])
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
