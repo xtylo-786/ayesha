@@ -451,7 +451,7 @@ def b_menu_select():
 		except:
 			pass
 		
-	p = ThreadPool(50)
+	p = ThreadPool(30)
 	p.map(main, id)
 	os.system('echo -e "-----------------------------------------------"| lolcat')
 	os.system('echo -e "The Process has been completed "| lolcat')
