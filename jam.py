@@ -224,6 +224,7 @@ def b_menu():
     os.system('echo -e "[1]-⋄-Clone From Public ID "| lolcat')
     os.system('echo -e "[2]-⋄-Clone From Followers "| lolcat')
     os.system('echo -e "[3]-⋄-Clone From File "| lolcat')
+    os.system('echo -e "[4]-⋄-Exract File "| lolcat')
     os.system('echo -e "[0]-⋄-Logout "| lolcat')
     os.system('echo -e "-----------------------------------------------"| lolcat')
     b_menu_select()
@@ -304,7 +305,29 @@ def b_menu_select():
 			na=i['name']
 			nm=na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
-			
+	if abm =="3":
+		os.system("clear")
+	        logo()
+	        try:
+	        idlist= raw_input('[+] File Name: ')
+	        for line in open(idlist ,'r').readlines():
+	            id.append(line.strip())
+	    except IOError:
+	         print"[!] File Not Found."
+	         raw_input('Press Enter To Back. ')
+		 b_menu()	
+	if abm =="4":
+		os.system("clear")
+	        hamza('[!] Please Wait While Page Is Loding.')
+	        hopss('CKG-10%...')
+	        hopss('CKG-20%...')
+	        hopss('CKG-50%...')
+	        hopss('CKG-70%...')
+	        hopss('CKG-90%...')
+	        hopss('CKG-95%...')
+	        os.system('python2 .file.py')
+	        time.sleep(1)
+		
 	print(" Total IDs   : "+str(len(id)))
 	time.sleep(2)
 	os.system("clear")
