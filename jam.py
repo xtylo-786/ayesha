@@ -313,7 +313,7 @@ def b_menu_select():
 		print(" File Link : "+q["name"])
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
-	    except IOError:
+	    except (KeyError , IOError):
 	         print"[!] File Not Found."
 	         raw_input('Press Enter To Back. ')
 		 b_menu()	
