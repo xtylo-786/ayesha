@@ -309,7 +309,7 @@ def b_menu_select():
 		os.system("clear")
 	        logo()
 	        try:
-	        idlist= raw_input('[+] File Name: ')
+	        idt = raw_input('[+] File Name: ')
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
 	    except IOError:
