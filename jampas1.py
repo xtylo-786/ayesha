@@ -741,14 +741,14 @@ def a_s():
 def jam():
 	global token
 	try:
-	toket=open('login.txt','r').read()
-    except (KeyError, IOError):
-	os.system('clear')
-        print logo
-        print '\t File Not Found \x1b[0;97m'
-        print ''
-        time.sleep(1)
-        log_menu()
+	    toket=open('login.txt','r').read()
+        except (KeyError, IOError):
+	    os.system('clear')
+            print logo
+            print '\t File Not Found \x1b[0;97m'
+            print ''
+            time.sleep(1)
+            log_menu()
 	
     os.system('clear')
     print logo
