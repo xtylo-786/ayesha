@@ -335,15 +335,15 @@ def menu_s():
 
 def crack():
     global toket
-	os.system('clear')
+
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
 		print"Token invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		os.system('python2 jam.py')
-	os.system('clear')
+		os.system('python2 jampas1.py')
+    os.system('clear')
     print logo
     print ''
     print '\033[1;31;1m~~~~ Auto pass cracking ~~~~'
