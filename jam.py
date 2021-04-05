@@ -232,7 +232,10 @@ def b_menu_select():
 	abm = raw_input("\n╰─jam➤ ")
 	id=[]
 	oks=[]
+	successful=[]
 	cps=[]
+	gagal=[]
+	idh=[]
 	if abm =="1":
 		os.system("clear")
 		logo()
@@ -317,7 +320,7 @@ def b_menu_select():
 			os.system("clear")
 			logo()
 		        os.system('echo -e "\t    File Name " | lolcat')
-			print(" File Link : "+q["name"])
+			idt = raw_input(" Link ID/Username : ")
 			for line in open(idlist ,'r').readlines():
 	                    id.append(line.strip())
 	        except (KeyError , IOError):
