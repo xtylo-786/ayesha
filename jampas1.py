@@ -743,12 +743,12 @@ def choice_crack():
     global token
     
     try:
-        toket = open('login.txt', 'r').read()
+        token = open('access_token.txt', 'r').read()
     except IOError:
         print ' Token invalid '
         os.system('rm -rf login.txt')
         time.sleep(0.01)
-        choice_crack():
+        log_menu()
 
     os.system('clear')
     print logo
