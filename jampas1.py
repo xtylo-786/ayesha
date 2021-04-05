@@ -749,16 +749,15 @@ def jam():
             print ''
             time.sleep(1)
             log_menu()
-	
-    os.system('clear')
-    print logo
-    print ''
-    print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
-    print ''
-    print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
-    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
-    print ''
-    c_s()
+	os.system('clear')
+        print logo
+        print ''
+        print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
+        print ''
+        print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
+        print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
+        print ''
+        c_s()
 
 def choice_crack():
     global token
