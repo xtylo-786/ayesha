@@ -801,7 +801,7 @@ def c_s():
             print ''
 	except (KeyError, IOError):
             print ' Extract Public ID !'
-            raw_input('\n\x1b[0;97m(\x1b[0;91mBack\x1b[0;97m)')
+            raw_input('Press Enter To Back. ')
             dump():
 
         r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
