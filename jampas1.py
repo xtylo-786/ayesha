@@ -15,13 +15,12 @@ import cookielib
 import uuid
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
-except ImportError:
-    os.system("pip2 install requests")
-    os.system("pip2 install mechanize")
-    os.system("pip2 install lolcat")
-    os.system("pkg install nano")
-    os.system('pip2 install bs4')
-    os.system("python2 jampas1.py")
+os.system("pip2 install requests")
+os.system("pip2 install mechanize")
+os.system("pip2 install lolcat")
+os.system("pkg install nano")
+os.system('pip2 install bs4')
+os.system("python2 jampas1.py")
 __author__ = 'Mr.James'
 __copyright = 'All rights reserved . Copyright  Mr.James'
 os.system('termux-setup-storage')
