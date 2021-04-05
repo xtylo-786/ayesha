@@ -24,39 +24,18 @@ try:
 except OSError:
     pass
 
-bd = random.randint(2e+07, 3e+07)
-sim = random.randint(20000, 40000)
-header = {
-    'x-fb-connection-bandwidth': repr(bd),
-    'x-fb-sim-hni': repr(sim),
-    'x-fb-net-hni': repr(sim),
-    'x-fb-connection-quality': 'EXCELLENT',
-    'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
-    'user-agent': 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]',
-    'content-type': 'application/x-www-form-urlencoded',
-    'x-fb-http-engine': 'Liger' }
+bd=random.randint(2e7, 3e7)
+sim=random.randint(2e4, 4e4)
+header={'x-fb-connection-bandwidth': repr(bd),'x-fb-sim-hni': repr(sim),'x-fb-net-hni': repr(sim),'x-fb-connection-quality': 'EXCELLENT','x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA','user-agent':'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16','content-type': 'application/x-www-form-urlencoded','x-fb-http-engine': 'Liger'}
+reload(sys)
+sys.setdefaultencoding("utf-8")
+c = "\033[1;32m"
+c2 = "\033[0;97m"
+c3 = "\033[1;31m"
 os.system('git pull')
 os.system('clear')
 logo = """
-\033[1;92m    _          _
-\033[1;92m     \        /
-\033[1;92m    __\______/__
-\033[1;92m    | [\033[1;31;1m©\033[1;92m]  [\033[1;31;1m©\033[1;92m] |​
- \033[1;92m   |  [\33[1;33m====\033[1;92m]  | [+] HACKERS BANGLADESH [+]
-\033[1;92m╔══o00════════00o═════════════════════════╗
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mAuthor    :  \033[1;92m James404_           \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  :  \033[1;92m +96598064347        \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  : \033[1;92m  Black404_           \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mGrup Fb   :  \033[1;92m Termux Command World\033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mVersion   :  \033[1;92m 0.3                  \033[1;31;1m█
-\033[1;92m╚═════════════════════════════════════════╝
-\033[1;93m➣ HACKING IS NOT CRIME IT’S A GAME AGAINST OF THE SYSTEM 
-\033[1;93m➣ BANGLADESH BLACK HAT HACKER
-\033[1;31;1m➣     AUTHOR :\033[1;92m JAMES-HACKER
-\033[1;31;1m➣       FROM :\033[1;92m DHAKA,NARAYANGANJ 
-\033[1;31;1m➣    WARNING :\033[1;92m DON'T COPY MY SCRIPT
-\033[1;31;1m➣    WARNING :\033[1;92m IF YOU GET TO FACE PROBLEM CLONING TIME
-\033[1;31;1m➣    WARNING :\033[1;92m CONTACT MY FB GROUP OR PAGE  """  
+os.system('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Zahra Zohaib)-(Janzada Khan)\n-----------------------------------------------" | lolcat')  """  
 def reg():
     os.system('clear')
     print logo
