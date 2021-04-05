@@ -310,7 +310,7 @@ def b_menu_select():
 	        logo()
 	        os.system('echo -e "\t    File Name " | lolcat')
 		os.system('echo -e "-----------------------------------------------"| lolcat')
-		print(" File Link : "+q["name"])
+		idt = raw_input(" Link ID/Username : ")
 	        for line in open(idlist ,'r').readlines():
 	            id.append(line.strip())
 	        try:
