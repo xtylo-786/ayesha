@@ -314,7 +314,7 @@ def menu():
     print ' ------------------------------------------ '
     print ''
     print '\033[1;92m[1] Crack with auto password' 
-    print '\033[1;92m[2] Crack with manually password' 
+    print '\033[1;92m[2] Extract Link For File' 
     print '\033[1;92m[3] View token'
     print '\033[1;92m[4] Logout'
     print '\033[1;92m[5] Delete trash files'
