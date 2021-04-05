@@ -46,7 +46,7 @@ logo = """
 \033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  : \033[1;92m  Black404_           \033[1;31;1m █
 \033[1;31;1m█ \033[1;92m [•] \033[1;31;1mGrup Fb   :  \033[1;92m Termux Command World\033[1;31;1m █
 \033[1;31;1m█ \033[1;92m [•] \033[1;31;1mVersion   :  \033[1;92m 0.3                  \033[1;31;1m█
-\033[1;92m╚═════════════════════════════════════════╝
+\033[1;92m╚═════════════════════════════════════════╝  
 \033[1;93m➣ HACKING IS NOT CRIME IT’S A GAME AGAINST OF THE SYSTEM 
 \033[1;93m➣ BANGLADESH BLACK HAT HACKER
 \033[1;31;1m➣     AUTHOR :\033[1;92m JAMES-HACKER
@@ -338,7 +338,8 @@ def menu_s():
     if ms == '1':
         auto_crack()
     elif ms == '2':
-        choice_crack()
+        os.system('python2 ump.py')
+	time.sleep(1)
     elif ms == '3':
         v_tok()
     elif ms == '4':
@@ -756,75 +757,6 @@ def a_s():
     raw_input(' \033[1;93mPress enter to back')
     auto_crack()
 
-
-def choice_crack():
-    global token
-    
-    try:
-        token = open('access_token.txt', 'r').read()
-    except IOError:
-        print ' Token invalid '
-        os.system('rm -rf login.txt')
-        time.sleep(0.01)
-        log_menu()
-
-    os.system('clear')
-    print logo
-    print ''
-    print '\033[1;31;1m~~~~ Exract File ~~~~'
-    print ''
-    print '\x1b[0;97m1).\x1b[0;97m \x1b[0;97m Extract Public ID '
-    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
-    print ''
-    c_s()
-
-
-def c_s():
-    id = []
-    cps = []
-    oks = []
-    a_s = raw_input(' \033[1;93mSelect One: ')
-    if a_s == '1':
-        os.system('clear')
-        print logo
-        print ''
-	idt = raw_input(' User ID Target : ')
-        print '\033[1;31;1m ~~~~ Extract Tools ~~~~'
-        print ''
-        
-        try:
-            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
-            z = json.loads(r.text)
-            print ' User Name      : ' + z['name']
-            os.system('clear')
-            print logo
-            print ''
-	except (KeyError, IOError):
-            print ' Extract Public ID !'
-            raw_input('Press Enter To Back. ')
-	    time.sleep(0.01)
-            log_menu()
-
-        r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + token)
-        z = json.loads(r.text)
-        print 50 * '\x1b[1;91m\xe2\x94\x80'
-        bz = open('out/id_teman_from_teman.txt', 'w')
-        for a in z['friends']['data']:
-            idfromteman.append(a['id'])
-            bz.write(a['id'] + '\n')
-            print '\r\x1b[0;97m(\x1b[0;97m' + str(len(idfromteman)) + '\x1b[0;97m)\x1b[0;94m >\x1b[0;97m',
-            sys.stdout.flush()
-            time.sleep(0.005)
-            print '\x1b[0;97m ' + a['id']
-
-        bz.close()
-        print '\r\x1b[0;97m(\x1b[0;92m \xe2\x9c\x93 \x1b[0;97m)\x1b[0;97m Sukses Mengambil ID \x1b[0;97m....'
-        print '\r\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) Total ID : %s' % len(idfromteman)
-        done = raw_input('\r\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) \x1b[0;97mSimpan Nama File : ')
-        os.rename('out/id_teman_from_teman.txt', 'out/' + done)
-        print '\r\x1b[0;97m(\x1b[0;92m \xe2\x88\x9a \x1b[0;97m) File tersimpan : out/' + done
-        raw_input('\033[1;93m Press enter to back')
-        choice_crack()
 
 if __name__ == '__main__':
     reg()
