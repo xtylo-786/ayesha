@@ -488,7 +488,7 @@ def a_s():
         try:
 	    idlist= raw_input('[+] File Name: ')
 	    for line in open(idlist ,'r').readlines():
-	    id.append(line.strip())
+	        id.append(line.strip())
 	except IOError:
 	    print"[!] File Not Found."
 	    raw_input('Press Enter To Back. ')
