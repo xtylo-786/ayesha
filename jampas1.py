@@ -500,7 +500,7 @@ def a_s():
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
 	pass10 = raw_input(' \033[1;92m[10]Password: ')
 	pass11 = raw_input(' \033[1;92m[11]Password: ')
-	pass12 = raw_input(' \033[1;92m[12]Password: '
+	pass12 = raw_input(' \033[1;92m[12]Password: ')
         
         try:
 	    idlist= raw_input('[+] File Name: ')
