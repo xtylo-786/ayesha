@@ -739,16 +739,13 @@ def a_s():
     auto_crack()
 	
 def dump():
-    global token
-
+    os.system('clear')
     try:
-	toket=open('login.txt','r').read()
-    except (KeyError, IOError):
-	os.system('clear')
-        print logo
-        print '\t File Not Found \x1b[0;97m'
-        print ''
-        time.sleep(1)
+        toket = open('login.txt', 'r').read()
+    except IOError:
+        print ' Token invalid '
+        os.system('rm -rf login.txt')
+        time.sleep(0.01)
         log_menu()
     os.system('clear')
     print logo
