@@ -197,7 +197,7 @@ def b_menu():
     os.system("clear")
     logo()
     try:
-        token = open('login.txt",'r').read()
+        token = open("fb.token.txt","r").read()
     except (KeyError , IOError):
         login()
     try:
