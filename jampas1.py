@@ -337,7 +337,7 @@ def crack():
     global toket
 
 	try:
-		toket=open('login.txt','r').read()
+	    toket=open('login.txt','r').read()
 	except IOError:
 		print"Token invalid"
 		os.system('rm -rf login.txt')
