@@ -338,11 +338,13 @@ def crack():
     
     try:
 	    toket=open('login.txt','r').read()
-	except IOError:
-		print"Token invalid"
-		os.system('rm -rf login.txt')
-		time.sleep(1)
-		os.system('python2 jampas1.py')
+	except (KeyError, IOError):
+	    os.system('clear')
+            print logo
+            print '\t File Not Found \x1b[0;97m'
+            print ''
+            time.sleep(1)
+            log_menu()
     os.system('clear')
     print logo
     print ''
