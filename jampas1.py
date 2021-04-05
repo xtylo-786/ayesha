@@ -775,7 +775,7 @@ def c_s():
         print ''
         
         try:
-            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
+            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
             z = json.loads(jok.text)
             print ' User Name      : ' + op['name']
             os.system('clear')
@@ -787,7 +787,7 @@ def c_s():
 	    time.sleep(0.01)
             c_s()
 
-        r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
+        r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + token)
         z = json.loads(r.text)
         jalan('\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) \x1b[0;97mMengambil Semua ID ...')
         print 50 * '\x1b[1;91m\xe2\x94\x80'
