@@ -326,7 +326,7 @@ def b_menu_select():
 	        except (KeyError , IOError):
 	            os.system('echo -e " \t    \033[1;31m File Not Found\033[0;97m"| lolcat')
 	            raw_input('Press Enter To Back. ')
-		    b_menu()	
+		    tech_abm()	
 	elif abm =="4":
 		os.system("clear")
 	        hamza('[!] Please Wait While Page Is Loding.')
