@@ -743,22 +743,22 @@ def jam():
 
     try:
 	toket=open('login.txt','r').read()
-        except (KeyError, IOError):
-	    os.system('clear')
-            print logo
-            print '\t File Not Found \x1b[0;97m'
-            print ''
-            time.sleep(1)
-            log_menu()
+    except (KeyError, IOError):
 	os.system('clear')
         print logo
+        print '\t File Not Found \x1b[0;97m'
         print ''
-        print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
-        print ''
-        print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
-        print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
-        print ''
-        c_s()
+        time.sleep(1)
+        log_menu()
+    os.system('clear')
+    print logo
+    print ''
+    print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
+    print ''
+    print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
+    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
+    print ''
+    c_s()
 
 def choice_crack():
     global token
