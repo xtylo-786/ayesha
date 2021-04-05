@@ -335,8 +335,8 @@ def menu_s():
 
 def crack():
     global toket
-
-	try:
+    
+    try:
 	    toket=open('login.txt','r').read()
 	except IOError:
 		print"Token invalid"
