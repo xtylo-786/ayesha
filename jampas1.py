@@ -486,13 +486,13 @@ def a_s():
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
-	        idlist= raw_input('[+] File Name: ')
-	        for line in open(idlist ,'r').readlines():
-	            id.append(line.strip())
-	    except IOError:
-	         print"[!] File Not Found."
-	         raw_input('Press Enter To Back. ')
-	         crack()
+	    idlist= raw_input('[+] File Name: ')
+	    for line in open(idlist ,'r').readlines():
+	    id.append(line.strip())
+	except IOError:
+	    print"[!] File Not Found."
+	    raw_input('Press Enter To Back. ')
+	    crack()
         
     elif a_s == '0':
         menu()
