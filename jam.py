@@ -305,7 +305,7 @@ def b_menu_select():
 			na=i['name']
 			nm=na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
-	if abm =="3":
+	elif abm =="3":
 		os.system("clear")
 	        logo()
 	        os.system('echo -e "\t    File Name " | lolcat')
@@ -324,7 +324,7 @@ def b_menu_select():
 	            os.system('echo -e " \t    \033[1;31m File Not Found\033[0;97m"| lolcat')
 	            raw_input('Press Enter To Back. ')
 		    b_menu()	
-	if abm =="4":
+	elif abm =="4":
 		os.system("clear")
 	        hamza('[!] Please Wait While Page Is Loding.')
 	        hopss('CKG-10%...')
