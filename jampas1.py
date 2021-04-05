@@ -737,7 +737,28 @@ def a_s():
     print ''
     raw_input(' \033[1;93mPress enter to back')
     auto_crack()
-
+	
+def jam():
+	global token
+	try:
+	toket=open('login.txt','r').read()
+    except (KeyError, IOError):
+	os.system('clear')
+        print logo
+        print '\t File Not Found \x1b[0;97m'
+        print ''
+        time.sleep(1)
+        log_menu()
+	
+    os.system('clear')
+    print logo
+    print ''
+    print '\033[1;31;1m~~~~ Manuall pass cracking ~~~~'
+    print ''
+    print '\x1b[0;97m2).\x1b[0;97m \x1b[0;97m Extract Public ID '
+    print '\x1b[0;91m0\x1b[0;97m).\x1b[0;97m \x1b[0;97mBack '
+    print ''
+    c_s()
 
 def choice_crack():
     global token
@@ -784,7 +805,7 @@ def c_s():
 	except (KeyError, IOError):
             print ' Extract Public ID !'
             raw_input('\n\x1b[0;97m(\x1b[0;91mBack\x1b[0;97m)')
-            choice_crack()
+            jam():
 
         r = requests.get('https://graph.facebook.com/' + idt + '?fields=friends.limit(50000)&access_token=' + toket)
         z = json.loads(r.text)
