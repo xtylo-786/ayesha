@@ -739,9 +739,10 @@ def a_s():
     auto_crack()
 	
 def jam():
-	global token
-	try:
-	    toket=open('login.txt','r').read()
+    global token
+
+    try:
+	toket=open('login.txt','r').read()
         except (KeyError, IOError):
 	    os.system('clear')
             print logo
