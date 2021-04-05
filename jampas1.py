@@ -775,8 +775,8 @@ def c_s():
         print ''
         
         try:
-            jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
-            op = json.loads(jok.text)
+            r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
+            z = json.loads(jok.text)
             print ' User Name      : ' + op['name']
             os.system('clear')
             print logo
