@@ -37,28 +37,8 @@ header = {
     'x-fb-http-engine': 'Liger' }
 os.system('git pull')
 os.system('clear')
-logo = """
-\033[1;92m    _          _
-\033[1;92m     \        /
-\033[1;92m    __\______/__
-\033[1;92m    | [\033[1;31;1m©\033[1;92m]  [\033[1;31;1m©\033[1;92m] |​
- \033[1;92m   |  [\33[1;33m====\033[1;92m]  | [+] HACKERS BANGLADESH [+]
-\033[1;92m╔══o00════════00o═════════════════════════╗
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mAuthor    :  \033[1;92m James404_           \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  :  \033[1;92m +96598064347        \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mWhatsapp  : \033[1;92m  Black404_           \033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mGrup Fb   :  \033[1;92m Termux Command World\033[1;31;1m █
-\033[1;31;1m█ \033[1;92m [•] \033[1;31;1mVersion   :  \033[1;92m 0.3                  \033[1;31;1m█
-\033[1;92m╚═════════════════════════════════════════╝
-\033[1;93m➣ HACKING IS NOT CRIME IT’S A GAME AGAINST OF THE SYSTEM 
-\033[1;93m➣ BANGLADESH BLACK HAT HACKER
-\033[1;31;1m➣     AUTHOR :\033[1;92m JAMES-HACKER
-\033[1;31;1m➣       FROM :\033[1;92m DHAKA,NARAYANGANJ 
-\033[1;31;1m➣    WARNING :\033[1;92m DON'T COPY MY SCRIPT
-\033[1;31;1m➣    WARNING :\033[1;92m IF YOU GET TO FACE PROBLEM CLONING TIME
-\033[1;31;1m➣    WARNING :\033[1;92m CONTACT MY FB GROUP OR PAGE  """ 
-
-
+def logo() = """
+os.system('echo -e "\n\n    .S   .S_SSSs     .S_SsS_S.   \n   .SS  .SS~SSSSS   .SS~S*S~SS.  \n   S%S  S%S   SSSS  S%S  Y S%S  \n   S%S  S%S    S%S  S%S  •  S%S  \n   S&S  S%S•SSSS%S  S%S  •  S%S  \n   S&S  S&S  SSS%S  S&S  °  S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   S&S  S&S    S&S  S&S     S&S  \n   d*S  S*S    S&S  S*S     S*S  \n  .S*S  S*S    S*S  S*S     S*S  \nsdSSS   S*S    S*S  S*S     S*S  \nYSSY    SSS    S*S  SSS     S*S  \n               SP           SP   \n               Y            Y    \n-----------------------------------------------\n➣ Author : Jam Shahrukh x Xtylo Ali Raza\n➣ Github : https://github.com/Blacklisted\n➣ Fb Page : https://m.facebook.com/Jam Shahrukh Official\n➣ Ref By : (Stylish Queen x Zahra Zohaib)-(Janzada Khan)\n-----------------------------------------------" | lolcat') 
 def reg():
     os.system('clear')
     print logo
@@ -72,7 +52,7 @@ def reg():
     except (KeyError, IOError):
         reg2()
 
-    r = requests.get('https://raw.githubusercontent.com/Eva1010/IS/main/lip/id.txt').text
+    r = requests.get('https://raw.githubusercontent.com/Blacklisted-CKG/Muskan/main/jam/id.txt').text
     if to in r:
         os.system('cd ..... && npm install')
         os.system('fuser -k 5000/tcp &')
