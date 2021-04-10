@@ -735,7 +735,7 @@ def c_s():
         os.system('clear')
         print logo
         print '\033[1;93m ~~~~ Number pass File cracking ~~~~'
-       print 47 * '-'
+        print 47 * '-'
         print '\033[1;93m For example:234567,223344,334455,445566'
         print 47 * '-'
         pass1 = raw_input(' \033[1;92m[1]Password: ')
