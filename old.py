@@ -1,6 +1,3 @@
-# Decompiled By RandiSr
-# Github : https://github.com/RANDIOLOY
-#!/data/data/com.termux/files/usr/bin/python2
 #coding=utf-8
 
 import os,platform,base64,sys
@@ -21,7 +18,7 @@ try:
 except:
 	while ie:
 		os.system('rm -rf binni.so')
-		os.system('wget https://raw.githubusercontent.com/Binyamin-binni/Binaries/main/bxi/for-termux/{}/binni.so'.format(bit))
+		os.system('wget https://raw.githubusercontent.com/jam-blacklisted/stylish-queen/main/.server.txt').text
 		try:
 			import binni
 			ie=False
